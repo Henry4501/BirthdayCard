@@ -19,7 +19,10 @@
 
     <!-- Background Music (Muted by default) -->
     <audio id="bgMusic" loop>
-        <source src="song.mp3" type="audio/mpeg">
+        <!-- Try local file first (placed next to index.html) -->
+        <source src="C:\Users\HP\OneDrive\Desktop\BirthdayCard\song.mp3" type="audio/mpeg">
+        <!-- Fallback to public sample if local file unavailable -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
     <!-- 1. Landing Screen -->
@@ -73,19 +76,27 @@
         <h2 class="section-title">Digital Scrapbook</h2>
         <div class="scrapbook-grid">
             <div class="photo-card" style="--rotation: -5deg;">
-                <div class="pic1.jpeg">📸 Bestie Moment</div>
+                <div class="img-placeholder">
+                    <img src="pic1.jpeg" alt="Bestie Moment" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=No+Image'">
+                </div>
                 <span>The Wedding Day</span>
             </div>
             <div class="photo-card" style="--rotation: 3deg;">
-                <div class="pic2.jpeg">🍦 Together and Happier</div>
+                <div class="img-placeholder">
+                    <img src="pic2.jpeg" alt="Together and Happier" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=No+Image'">
+                </div>
                 <span>@Diecuts Mart</span>
             </div>
             <div class="photo-card" style="--rotation: -2deg;">
-                <div class="pic3.jpeg">✨ Chaotic Energy</div>
+                <div class="img-placeholder">
+                    <img src="pic3.jpeg" alt="Chaotic Energy" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=No+Image'">
+                </div>
                 <span>Our True Selves</span>
             </div>
             <div class="photo-card" style="--rotation: 6deg;">
-                <div class="pic4.jpeg">🌏 BFF Foreva</div>
+                <div class="img-placeholder">
+                    <img src="pic4.jpeg" alt="BFF Foreva" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=No+Image'">
+                </div>
                 <span>Bestie Forever</span>
             </div>
         </div>
