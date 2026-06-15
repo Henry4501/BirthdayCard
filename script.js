@@ -41,6 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 4. Flip Card Interaction
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('clicked');
+        });
+    });
+
     
     // 5. Envelope Animation
     const envelope = document.getElementById('envelope');
@@ -254,7 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll reveal animations
     gsap.utils.toArray('.photo-card, .flip-card, .glass-card').forEach(elem => {
         gsap.from(elem, {
-            scrollTrigger: elem,
+            scrollTrigger: {
+                trigger: elem,
+                start: 'top 85%'
+            },
             y: 50,
             opacity: 0,
             duration: 1,
