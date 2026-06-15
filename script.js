@@ -41,17 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Friendship Timer (Change start date here)
-    const startDate = new Date('2003-06-15'); // Example start date
-    function updateTimer() {
-        const now = new Date();
-        const diff = now - startDate;
-        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-        const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
-        document.getElementById('friendshipTimer').innerText = `${years} Years & ${days} Days of Pure Chaos`;
-    }
-    updateTimer();
-
+    
     // 5. Envelope Animation
     const envelope = document.getElementById('envelope');
     envelope.addEventListener('click', () => {
